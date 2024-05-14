@@ -20,6 +20,8 @@ for (const pl of inputs) {
     const manifest = JSON.parse(await fs.readFile(path.join(source, "manifest.json"), "utf8"));
     manifest.description = "This plugin has been temporarily disabled by the Vendetta staff";
     manifest.hash = "7a3bac42d229c335dc892d1749680f70ba9d74cb06cd451dcd1153b9acd1a8c1";
+    manifest.bunny ??= {};
+    manifest.bunny.disabled = true;
 
     await fs.writeFile(path.join(source, "index.js"), `(()=>({onUnload(){}}))();`);
     await fs.writeFile(path.join(source, "manifest.json"), JSON.stringify(manifest));

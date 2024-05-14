@@ -33,6 +33,8 @@ for (let i = 0; i < inputs.length; i += 2) {
       manifest.main = "index.js";
       manifest.vendetta ??= {};
       manifest.vendetta.original = target;
+      manifest.bunny ??= {};
+      manifest.bunny.redirect = target;
     } catch {
       throw "Malformed plugin manifest JSON";
     }
