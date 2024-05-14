@@ -39,7 +39,7 @@ jobs:
           path: scripts
       - uses: actions/checkout@v4
         with:
-          repository: bunny-mod/plugins-proxy
+          repository: bn-plugins/vd-proxy
           token: ${{ secrets.PROXY_TOKEN }}
           path: proxy
 
