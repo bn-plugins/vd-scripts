@@ -14,10 +14,16 @@ on:
           - remove
           - disable
           - redirect
+          - notice
 
       plugins:
         description: Plugins
         required: true
+        type: string
+      
+      notice:
+        description: Notice (if any)
+        required: false
         type: string
 
 permissions:
@@ -47,3 +53,4 @@ jobs:
         env:
           ACTION: ${{ inputs.action }}
           PLUGINS: ${{ inputs.plugins }}
+          NOTICE: ${{ inputs.notice }}
